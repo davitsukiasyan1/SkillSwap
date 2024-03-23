@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SkillSwap</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="click_to_log_in">Click to Log In</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="log_out">Log out</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="chats">Chats</string>
+    <string name="settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="settings_fragment" />
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="skillswap">SkillSwap</string>
+</resources>
