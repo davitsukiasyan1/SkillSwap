@@ -45,28 +45,38 @@ public class SkillSwap extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
-        auth  = FirebaseAuth.getInstance();
         imageButton =(ImageButton) findViewById(R.id.settings);
-        imageButton1 = (ImageButton) findViewById(R.id.logout);
-        imageButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(SkillSwap.this, "kpar vopshem", Toast.LENGTH_SHORT).show();
-                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SkillSwap.this, "mi hate kapr", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SkillSwap.this, "You clicked Settings", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SkillSwap.this, Settings.class);
                 startActivity(intent);
 
             }
         });
+
+
+
+        imageButton1 = (ImageButton) findViewById(R.id.logout);
+        imageButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SkillSwap.this, "You clicked Log out", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
+
+
+
+
+        auth  = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
